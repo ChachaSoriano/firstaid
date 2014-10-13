@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="../source/scripts/js.js"></script>
+	<script type="text/javascript" src="../source/scripts/ui.js"></script>
+	<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+	
+		<style>
+div.ex {
+    width: 93%;
+    padding: 10px;
+    border: 5px solid white;
+    margin: auto;
+}
+#forImage{
+width: 93%;
+    padding: 10px;
+	border: 5px solid white;
+    margin: auto;
+	height:100px;
+}
+#togglethis{
+width: 93%;
+    padding: 10px;
+	border: 5px solid white;
+    margin: auto;
+	height:100%;
+}
+
+#btnPlay,#logout,#leaderBoard,#	help{
+width: 90%;
+    padding: 10px;
+	border: 5px solid #08387c;
+	background-color:#08387c;
+    margin: auto;
+	height:50px;
+	margin-left:auto;
+	margin-top:auto;
+	font-size: 40px;
+}
+
+#btnStartAnimals{
+width: 90%;
+    padding: 10px;
+	border: 5px solid #bd0613;
+	background-color:#bd0613;
+    margin: auto;
+	height:100%;
+	margin-left:auto;
+	margin-top:auto;
+}
+#homeBg{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-image:url(css/bg.png);
+	background-position: top center;
+	background-size: cover;
+}
+#result,#gameBg,#bgScores{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-image:url(css/bg.png);
+	background-position: top center;
+	background-size: cover;
+	
+}
+
+#relative,#relative2,#relative3 {
+    position: relative;
+    top: 10px;
+	color:#ff6666;
+}
+	</style>
+	</head>
+	<body>
+	
+<!--MAIN PAGE-->
+<div data-role="page" id="index" data-theme="d" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+ <div data-role="content" align="center" >
+	<br />
+	<img src="images/kit.png" width="100%">
+ </div>
+<div style=" margin: 5%; width: 90%; height: 90%">
+	<a href="#menu" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right" data-theme="f">MENU</a>
+	<a href="#game" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right" data-theme="b">PLAY GAME</a>
+	<a href="#about" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right" data-theme="e">ABOUT</a>
+
+</div>
+</div>
+
+<!--Menu-->
+<div data-role="page" id="menu" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content">
+		<div data-role="content" >
+		<h2 align="center" style="color:#dc0d0d;">Basic First Aid Procedures:</h2>
+		<p align="justify"><i>Following are some basic first aid procedures for treating shock, bleeding and wounds, burns, choking, electric shock, eye injury, fainting, heat stroke, hypothermia, and unconsciousness. These techniques can be used in the workplace or at home and being prepared will help make the most of a serious situation.</i></p><br/>
+			<ul data-role="listview" data-theme="c">
+			<li><a href="#list2"><h5>Bleeding and Wounds</h5></a></li>
+			<li><a href="#list3"><h5>Burns</h5></a></li>
+			<li><a href="#list4"><h5>Choking</h5></a></li>
+			<li><a href="#list5"><h5>Electric Shock</h5></a></li>
+			<li><a href="#list6"><h5>Eye Injury</h5></a></li>
+			<li><a href="#list7"><h5>Fainting</h5></a></li>
+			<li><a href="#list8"><h5>Heat Stroke</h5></a></li>
+			<li><a href="#list9"><h5>Hypothermia (Prolonged exposure to the cold)</h5></a></li>
+			<li><a href="#list1"><h5>Shock</h5></a></li>
+			<li><a href="#list10"><h5>Unconsciousness</h5></a></li>
+			</ul>
+			</div>
+		</div>
+	<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="list1" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Shock</b></h2>
+			<center><img src="images/shock.png" height="100%" width="100%"></center>
+			<p align="justify"  ><i>Shock can be life threatening. Symptoms include cold sweat, weakness, irregular breathing, chills, pale or bluish lips and fingernails, rapid weak pulse and nausea.</i><br /><br />
+			• Call 9-1-1 or seek medical help immediately.<br /><br />
+			• Do not give the victim anything to eat or drink.<br /><br />
+			• Lay the victim on his/her back, but do not move him/her if there's a back or neck injury. If the victim is unconscious, vomiting or has severe injury to the lower face or jaw, lay him/her on his/her side and be sure the victim is getting adequate air.<br /><br />
+			• Keep the victim warm (not hot) by use of blankets or clothes.<br /><br />
+			• Raise the victim's feet and legs with a pillow. (Only do this if it does not cause the victim any pain.)
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list2" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Bleeding and Wounds</b></h2>
+			<center><img src="images/bleeding.png" height="100%" width="100%"></center>
+			<p align="justify"  >• Place a clean cloth or gauze and gloved hand over the wound; apply firm, steady pressure for at least 5 minutes.<br /><br />
+			• Call 9-1-1 or other emergency personnel if bleeding is severe.<br /><br />
+			• Elevate an injured arm or leg above the level of the victim's heart if practical.<br /><br />
+			• When bleeding stops, secure the cloth with a bandage. Do Not lift the cloth from the wound to check if bleeding has stopped. Be sure the bandage is not too tight—it may cut off circulation<br /><br />
+			• Check the victim for shock.<br /><br />
+			<i>Never use a tourniquet unless you cannot control the bleeding. Tourniquets may result in subsequent medical amputation.</i>
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list3" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Burns</b></h2>
+			<center><img src="images/burn.png" height="0%" width="100%"></center>
+			<p align="justify"  ><b>1. Chemical or Compressed Gas Burns</b><br /><br />
+			• Use a drench hose, emergency shower or eyewash for at least 15 minutes to rinse away all traces of chemicals while removing any contaminated clothing from the victim.<br /><br />
+			• Cover the burn loosely with a clean, dry cloth or special burn dressing.<br /><br />
+			• Check the victim for shock.<br /><br />
+			• Call 9-1-1 or seek medical attention as soon as possible.<br /><br /><br />
+			<b>2. Heat or Electrical Burns</b><br /><br />
+			• If necessary, use water to stop actual burning of skin.<br /><br />
+			• If the skin is not broken, submerse the burned area under cool running water, or gently apply a cool compress until pain is relieved. Bandage with a clean, dry cloth.<br /><br />
+			• Do not break a blister if one forms.<br /><br />
+			• Do not apply ointments or creams.<br /><br />
+			• If skin is broken, or if burns are severe:<br /><br />
+			- Call 9-1-1 or other emergency personnel.<br /><br />
+			- Do not clean the wound or remove embedded clothing.<br /><br />
+			- Cover the burn loosely with a clean, dry cloth.<br /><br />
+			- Expect shock and treat accordingly.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list4" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Choking</b></h2>
+			<center><img src="images/choking.png" height="0%" width="100%"></center>
+			<p align="justify"  ><i>Note: These instructions are for choking victims over one year of age. There are specific guidelines for treatment of infant choking that are not outlined in this document.<br /><br />
+			If the victim can speak or cough forcibly and is getting sufficient air, do not interfere with his/her attempts to cough the obstruction from the throat. If the victim cannot speak or is not getting sufficient air, have someone call 9-1-1 while you perform abdominal thrusts.</i><br /><br />
+			1. Stand directly behind the victim and wrap your arms around the stomach. (See the illustration)<br />
+			<center><img src="images/chock1.jpg" height="0%" width="100%"></center><br />
+			2. Make a fist with one hand and place that fist just above the navel and well below the ribs, with the thumb and forefinger side toward you. (See the illustration)<br /><br />
+			<center><img src="images/chock2.jpg" height="0%" width="100%"></center><br />
+			3. Grasp this fist with the other hand and pull it quickly toward you with an inward and slightly upward thrust. Repeat if necessary. (See the illustration)<br />
+			<center><img src="images/chock3.jpg" height="0%" width="100%"></center><br />
+			<b>If the victim becomes unconscious:</b><br /><br />
+			1.	Lay the victim on their back.<br /><br />
+			2.	If the object that is blocking the airway is visible, reach a finger into the victim's mouth (along the inside of the cheek) and try to sweep the obstruction out of the victim's throat, being careful not to push the object deeper into the victim’s airway.<br /><br />
+			3.	Even if this is not successful, attempt rescue breathing.<br /><br />
+			4.	If the victim is still not breathing or moving, begin chest compressions (CPR).
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list5" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Electric Shock</b></h2>
+			<center><img src="images/electricshock.png" height="0%" width="100%"></center>
+			<p align="justify"  >1. Do not touch the victim until electrical contact is broken.<br /><br />
+			2. If possible, unplug or switch off the source of electricity.<br /><br />
+			3. If victim is not breathing and has no pulse, call 9-1-1 or seek medical attention immediately.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list6" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Eye Injury</b></h2>
+			<center><img src="images/eyeinjury.png" height="0%" width="100%"></center>
+			<p align="justify"  ><b>1. Chemical</b><br /><br />
+			a. Hold the eyelids apart and flush the eyeball with lukewarm water for at least 15-30 minutes. Be careful not to let runoff water flow into the other eye.<br /><br />
+			b. Place a gauze pad or cloth over both eyes and secure it with a bandage.<br /><br />
+			c. Get to an eye specialist or emergency room immediately.<br /><br /><br />
+			<b>2. Cut, Scratch or Embedded Object</b><br /><br />
+			a. Place a gauze pad or cloth over both eyes and secure it with a bandage.<br /><br />
+			b. Do not try to remove an embedded object.<br /><br />
+			c. Get to an eye specialist or emergency room immediately.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list7" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Fainting</b></h2>
+			<center><img src="images/fainting.png" height="0%" width="100%"></center>
+			<p align="justify"  ><i>Note: Fainting victims regain consciousness almost immediately. If this does not happen, the victim could be in serious danger and you should call 9-1-1 as soon as possible.</i><br /><br />
+			1. Lay the victim down on their back and make sure they have plenty of fresh air.<br /><br />
+			2. Reassure the victim and apply a cold compress to the forehead.<br /><br />
+			3. If the victim vomits, roll the victim on his/her side and keep the windpipe clear.<br /><br />
+			4. Report the fainting incident to the victim's doctor.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list8" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Heat Stroke</b></h2>
+			<center><img src="images/heatstroke.jpg" height="100%" width="100%"></center>
+			<p align="justify"  ><i>Heat stroke can be life threatening. Symptoms can include a body temperature of 105°F or higher; dry, hot, flushed skin; rapid pulse; unconsciousness; and lack of perspiration.</i><br /><br />
+			1. Get the victim out of the heat and into a cooler place.<br /><br />
+			2. Place the victim in the shock position, lying on the back with feet up.<br /><br />
+			3. Remove or loosen the victim's clothing.<br /><br />
+			4. Cool the victim by fanning and applying cloth-wrapped cold packs or wet towels.<br /><br />
+			5. Treat for shock.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list9" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Hypothermia (Prolonged exposure to the cold)</b></h2>
+			<center><img src="images/hypothermia.jpg" height="100%" width="100%"></center>
+			<p align="justify"  ><i>Hypothermia can be life threatening. Symptoms include lower than normal body temperature, shivering, apathy, disorientation, drowsiness, and eventually, unconsciousness.</i><br /><br />
+			1. Immediately move the victim into the best available nearby shelter.<br /><br />
+			2. Get the victim out of wet clothes and replace with dry clothes, sleeping bag or blankets.<br /><br />
+			3. Have the victim drink a warm, sweet, non-alcoholic beverage if possible.<br /><br />
+			4. Seek medical help.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list10" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<h2 align="center" style="color:#dc0d0d;"><b>Unconsciousness</b></h2>
+			<center><img src="images/unconsciousness.png" height="100%" width="100%"></center>
+			<p align="justify"  >1. Determine responsiveness by gently tapping the victim's shoulder and asking, "Are you okay?"<br /><br />
+			2. If there is no response, shout "Help!" and look for a medical alert tag on the victim's neck or wrist.<br /><br />
+			3. If victim is not breathing and has no pulse, begin CPR.<br /><br />
+			4. Call 9-1-1 or seek medical aid as soon as possible.
+			</p>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!--about-->
+<div data-role="page" id="about" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content" data-theme="f" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<h2 align="center" style="color:#dc0d0d;"><b>First Aid</b></h2>
+	<p align="justify"  ><i>The person should be encouraged to use the principles of 'paying the PRICE' and 'avoiding HARM' for the first 48-72 hours after the injury.</i><br /><br />
+		• <b>Protection:</b> from further injury. <br /><br />
+		• <b>Rest:</b> for the first 48-72 hours after injury, activity should be avoided. The use of crutches can be considered for lower limb injuries. <br /><br />
+		• <b>Ice:</b> a specialised ice pack (or a bag of frozen peas) wrapped in a cloth can be applied for 15-20 minutes every 2-3 hours for the first 48-72 hours after injury.<br /><br />
+		• <b>Compression:</b> helps to reduce swelling. An elastic bandage can be applied around the affected limb. Remove at night. Ensure that the bandage is not too tight.<br /><br />
+		• <b>Elevation:</b> as far as possible, elevate the injured area above the level of the heart for the first 48-72 hours, ensuring that it is comfortably supported.<br /><br /><br />
+		<b>Avoid HARM for the first 72 hours after the injury:</b><br /><br />
+		• <b>Heat:</b> including heat packs, hot baths, saunas.<br /><br />
+		• <b>Alcohol:</b> this can increase swelling and bleeding.<br /><br />
+		• <b>Running:</b> or other forms of exercise.<br /><br />
+		• <b>Massage:</b> this can increase swelling and bleeding.<br /><br />
+		<i>The person can take analgesia as needed. However, it is generally suggested that oral non-steroidal anti-inflammatory drugs (NSAIDs) be avoided for the first 48 hours after injury as there is some evidence that they may delay healing.</i>
+	</p><br /><br /><hr />
+	<p align="right" style="font-size:11px; color:#cc0000;">Developed by: Charmaine A. Soriano | BSIT-4A | Gordon College</p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#about" data-icon="info" data-transition="slidefade" data-theme="e"a>About</a></li>
+		<li><a href="#hotlines" data-icon="phone" data-transition="slidefade">Contacts</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="hotlines" data-theme="a" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+		<div data-role="content" style="font-family: 'Century Gothic'">   
+            <h2 align="center" style="font-family: 'Century Gothic'; color:#dc0d0d;"><b>Important Telephone Numbers in Olongapo City</b></h2>
+                <ul data-filter="true" align="justify" style="font-family: 'Century Gothic'">
+                    <h3 align="center" style="color:#990000;">Barangay Hotline </h3>
+                    <li>Barangay Asinan: &nbsp <a href="tel:0472235708">223 - 5708</a> </li>
+                    <li>Barangay Banicain: &nbsp <a href="tel:0476110382">611 - 0382</a></li>
+                    <li>Barangay Barretto: &nbsp <a href="tel:0472224295">222 - 4295</a></li>
+                    <li>Barangay East Bajac-Bajac 1: &nbsp <a href="tel:0472225035">222 - 5035</a></li>
+                    <li>Barangay East Bajac-Bajac 2: &nbsp <a href="tel:0472235712">223 - 5712</a></li>
+                    <li>Barangay East Tapinac: &nbsp <a href="tel:0472233444">223 - 3444</a></li>
+                    <li>Barangay Gordon Heights: &nbsp <a href="tel:0472235497">223 - 5497</a></li>
+                    <li>Barangay Kalaklan: &nbsp <a href="tel:0472246983">224 - 6983</a></li>
+                    <li>Barangay Mabayuan: &nbsp <a href="tel:0472245179">224 - 5179</a></li>
+                    <li>Barangay New Cabalan: &nbsp <a href="tel:0472245414"> 224 - 5414</a></li>
+                    <li>Barangay New Ilalim: &nbsp <a href="tel:0472239772"> 223 - 9772</a></li>
+                    <li>Barangay New Kababae: &nbsp <a href="tel:0472228326"> 222 - 8326</a></li>
+                    <li>Barangay Old Cabalan: &nbsp <a href="tel:0472231629"> 223 - 1629</a></li>
+                    <li>Barangay Pag-Asa: &nbsp <a href="tel:0472228037">222 - 8037</a></li>
+                    <li>Barangay Sta. Rita: &nbsp <a href="tel:0472229225"> 222 - 9225</a></li>
+                    <li>Barangay West Bajac-Bajac 1: &nbsp <a href="tel:0472225137"> 222 - 5137</a></li>
+                    <li>Barangay West Bajac-Bajac 2: &nbsp <a href="tel:0472242768"> 224 - 2768</a></li>
+                    <li>Barangay West Tapinac: &nbsp <a href="tel:0472233434">223 - 3434</a></li><br />
+					Red Cross: &nbsp <a href="tel:0472222181">222 - 2181</a>
+                </ul>
+            
+			</div>
+	<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#about" data-icon="info" data-transition="slidefade">About</a></li>
+		<li><a href="#hotlines" data-icon="phone" data-transition="slidefade" data-theme="e">Contacts</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!-- GAME -->
+<div data-role="page" id="game" data-theme="d" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content">
+	<p align="justify"></p>
+	<a href="#questionScience" id="btnPlay" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right">START GAME</a>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-role="button" data-transition="pop" data-icon="back" data-iconpos="top">BACK</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!-- PLAYGAME -->
+<div data-role="page" id="questionScience" data-theme="d" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content" data-theme="d" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+		<div id="relative" style="color:#000066; font-family: 'Century Gothic';">
+		<center>
+		<h4 id="timer">TIME</h4>
+		<h4 id="showTimer" style="font-family: 'Century Gothic';"></h4>
+		<h4 id="score">SCORE</h4>
+		<h4 id="asd" style="margin-left: auto; margin-top: auto; font-family: 'Century Gothic';"></h4>
+		
+		<span id="count"></span>
+		
+		<h4 id="prog2"></h4>
+		<h4 id="questions"></h4>
+	</center>
+
+<a data-role="button" id="check1" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c1"></span></a>
+<a data-role="button" id="check2" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c2"></span></a>
+<a data-role="button" id="check3" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c3"></span></a>
+<a data-role="button" id="check4" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c4"></span></a>
+<a data-role="button" id="check5" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c5"></span></a>
+<a data-role="button" id="check6" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c6"></span></a>
+<a data-role="button" id="check10" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c10"></span></a>
+<a data-role="button" id="check11" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c11"></span></a>
+<a data-role="button" id="check12" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c12"></span></a>
+<a data-role="button" id="check13" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c13"></span></a>
+<a data-role="button" id="check14" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c14"></span></a>
+<a data-role="button" id="check15" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c15"></span></a>
+<a data-role="button" id="check16" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c16"></span></a>
+<a data-role="button" id="check17" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c17"></span></a>
+<a data-role="button" id="check18" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c18"></span></a>
+<a data-role="button" id="check19" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c19"></span></a>
+<a data-role="button" id="check20" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c20"></span></a>
+<a data-role="button" id="check21" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c21"></span></a>
+<a data-role="button" id="check22" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c22"></span></a>
+<a data-role="button" id="check23" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c23"></span></a>
+<a data-role="button" id="check24" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c24"></span></a>
+<a data-role="button" id="check25" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c25"></span></a>
+<a data-role="button" id="check26" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c26"></span></a>
+<a data-role="button" id="check27" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c27"></span></a>
+<a data-role="button" id="check28" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c28"></span></a>
+<a data-role="button" id="check29" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c29"></span></a>
+<a data-role="button" id="check30" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c30"></span></a>
+<a data-role="button" id="check31" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c31"></span></a>
+<a data-role="button" id="check32" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c32"></span></a>
+<a data-role="button" id="check33" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c33"></span></a>
+<a data-role="button" id="check34" class="q12" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c34"></span></a>
+<a data-role="button" id="check35" class="q12" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c35"></span></a>
+<a data-role="button" id="check36" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c36"></span></a>
+<a data-role="button" id="check37" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c37"></span></a>
+<a data-role="button" id="check38" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c38"></span></a>
+<a data-role="button" id="check39" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c39"></span></a>
+<a data-role="button" id="check40" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c40"></span></a>
+<a data-role="button" id="check41" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c41"></span></a>
+<a data-role="button" id="check42" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c42"></span></a>
+<a data-role="button" id="check43" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c43"></span></a>
+<a data-role="button" id="check44" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c44"></span></a>
+<a data-role="button" id="check45" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c45"></span></a>
+<a data-role="button" id="check46" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c46"></span></a>
+<a data-role="button" id="check47" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ff6666;"><span id="c47"></span></a>
+
+<button id="splice" style="display:none;" onClick="splice()">next</button>
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-theme="d">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">QUIT GAME</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!-- save online dialog-->
+<div data-role="page" data-theme="a" data-position="fixed" id="saveDialog" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<img id="result"/>
+		<div data-role="content">
+		<div id="relative2" style="color:#000066;">
+		<center><h1 id="tryAgain" style="font-family: 'Century Gothic'"></h1></center>
+		<form id="savedata" action="javascript:saveOnline();">
+		<center>
+		<h1 style="font-size:20px; font-family: 'Century Gothic';">Your Last Score : </h1><input type="text" id="lastscore" disabled style="font-size:20px; text"/>
+		<h1 style="font-size:20px; font-family: 'Century Gothic';">Your New Score : </h1><input type="text" id="score" name="score" style="display:none;"/>
+		<h1 id="score2" style="font-size:20px;"></h1>
+		<input type="text" id="username" name="username" style="display:none;">
+		</center>
+		</form>
+		<div data-role="footer" data-position="fixed" data-theme="d">
+		<div data-role="navbar">
+		<ul>
+		<li><a href="#game" data-role="button" data-transition="pop" data-icon="back" data-iconpos="top">BACK</a></li>
+		</ul>
+	</div>
+	</div>
+		</div>
+		</div>
+</div>
+
+<script>
+	$("#playAgain").click(function(){
+		location.href="#home";
+		location.reload();
+		var score=window.localStorage.getItem("score");
+		var changeScore=window.localStorage.setItem("lastscore",score);
+	});
+		$("#saveScore").click(function(){
+		location.href="#home";
+		var score=window.localStorage.getItem("score");
+		window.localStorage.setItem("lastscore",score);
+	});
+
+//save online
+function saveOnline(){
+
+var form = $("#savedata");
+         				$.getJSON("phpfiles/savescore.php?callback=?", form.serialize(),function(data)
+         				{
+						alert("Success! Your score is saved.")
+						location.href="home.html";
+						var score=window.localStorage.getItem("score");
+						window.localStorage.setItem("lastscore",score);
+         				}).fail(function(data){
+         				alert("Failed to Save");
+         				});
+}
+
+	// leaderboard get onLine
+	function loadAjax(){
+
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				document.getElementById("inserthere").innerHTML=xmlhttp.responseText;
+		}}
+	xmlhttp.open("GET","phpfiles/leaderboard.php", true);
+		xmlhttp.send();
+	}
+	
+$("#menu").click(function(){
+$("#logout").slideToggle(100).click(function(){
+localStorage.removeItem("datauser");
+location.href="index.html";
+});
+});
+
+$("#back").click(function(){
+location.href="#home";
+});
+
+$("#quit").click(function(){
+location.href="home.html";
+});
+
+$("#btnPlay").click(function(){
+splice();
+});
+
+//questions
+var qqq = ["q1", "q2","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16"];
+var score=0;
+function splice(){
+document.getElementById("asd").innerHTML=score;
+var rand=Math.floor((Math.random() * 4));
+setTimeout(function(){
+var a=qqq.splice((Math.random() * qqq.length),1);
+if(a=="q1"){
+$(".q1").show();
+document.getElementById("questions").innerHTML="It can be life threatening. Symptoms can include a body temperature of 105°F or higher; dry, hot, flushed skin; rapid pulse; unconsciousness; and lack of perspiration.";
+$("#c1").text("Heat Stroke");
+$("#c2").text("Fainting");
+$("#c3").text("Choking");
+$("#check1").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q1").hide();
+});
+$("#check2").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q1").hide();
+});
+$("#check3").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q1").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q2"){
+$(".q2").show();
+document.getElementById("questions").innerHTML="It can be life threatening. Symptoms include lower than normal body temperature, shivering, apathy, disorientation, drowsiness, and eventually, unconsciousness.";
+$("#c4").text("Heat Stroke");
+$("#c5").text("Burn");
+$("#c6").text("Hypothermia");
+$("#check4").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q2").hide();
+});
+$("#check5").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q2").hide();
+});
+$("#check6").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q2").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+}else if(a=="q4"){
+$(".q4").show();
+document.getElementById("questions").innerHTML="It helps reduce swelling.";
+$("#c10").text("Ice");
+$("#c11").text("Elevation");
+$("#c12").text("Compression");
+$("#check10").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q4").hide();
+});
+$("#check11").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q4").hide();
+});
+$("#check12").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q4").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q5"){
+$(".q5").show();
+document.getElementById("questions").innerHTML="This can increase swelling and bleeding.";
+$("#c13").text("Message");
+$("#c14").text("Running");
+$("#c15").text("Alcohol");
+$("#check13").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q5").hide();
+});
+$("#check14").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q5").hide();
+});
+$("#check15").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q5").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q6"){
+$(".q6").show();
+document.getElementById("questions").innerHTML="It can be life threatening. Symptoms include cold sweat, weakness, irregular breathing, chills, pale or bluish lips and fingernails, rapid weak pulse and nausea.";
+$("#c16").text("Burns");
+$("#c17").text("Stroke");
+$("#c18").text("Unconsciousness");
+$("#check16").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q6").hide();
+});
+$("#check18").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q6").hide();
+});
+$("#check17").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q6").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);}
+
+else if(a=="q7"){
+$(".q7").show();
+document.getElementById("questions").innerHTML="Avoid HARM for the first 72 hours after the injury: The person can take _____________ as needed.";
+$("#c19").text("anti-inflammatory");
+$("#c20").text("drugs");
+$("#c21").text("analgesia");
+$("#check21").click(function(){
+score=score+1;
+clearInterval(time);
+splice();
+$(".q7").hide();
+});
+$("#check19").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q7").hide();
+});
+$("#check20").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q7").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q8"){
+$(".q8").show();
+document.getElementById("questions").innerHTML="The person should be encouraged to use the principles of 'paying the _____________' and 'avoiding HARM' for the first 48-72 hours after the injury.";
+$("#c22").text("PRICE");
+$("#c23").text("TAX");
+$("#c24").text("BILL");
+$("#check23").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q8").hide();
+});
+$("#check24").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q8").hide();
+});
+$("#check22").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q8").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q9"){
+$(".q9").show();
+document.getElementById("questions").innerHTML="What is the Number to call in case of emergency?";
+$("#c25").text("9-7-7");
+$("#c26").text("9-1-1");
+$("#c27").text("7-6-7");
+$("#check25").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q9").hide();
+});
+$("#check27").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q9").hide();
+});
+$("#check26").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q9").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q10"){
+$(".q10").show();
+document.getElementById("questions").innerHTML="Never use a _____________ unless you cannot control the bleeding.";
+$("#c28").text("band aid");
+$("#c29").text("tourniquet");
+$("#c30").text("bandage");
+$("#check29").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q10").hide();
+});
+$("#check28").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q10").hide();
+});
+$("#check30").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q10").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q11"){
+$(".q11").show();
+document.getElementById("questions").innerHTML="When bleeding stops, secure the cloth with a _____________.";
+$("#c31").text("bandage");
+$("#c32").text("band aid");
+$("#c33").text("none");
+$("#check31").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q11").hide();
+});
+$("#check32").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q11").hide();
+});
+$("#check33").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q11").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q12"){
+$(".q12").show();
+document.getElementById("questions").innerHTML="When the patient suffer from choking and If the victim can speak or cough forcibly and is getting sufficient air, interfere with his/her attempts to cough the obstruction from the throat.";
+$("#c34").text("False");
+$("#c35").text("True");
+$("#check34").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q12").hide();
+});
+$("#check35").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q12").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q13"){
+$(".q13").show();
+document.getElementById("questions").innerHTML="_____________ victims regain consciousness almost immediately.";
+$("#c36").text("Fainting");
+$("#c37").text("Electrical Shock");
+$("#c38").text("Unconsciousness");
+$("#check36").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q13").hide();
+});
+$("#check37").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q13").hide();
+});
+$("#check38").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q13").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q14"){
+$(".q14").show();
+document.getElementById("questions").innerHTML="In _____________ person, do not give the victim anything to eat or drink.";
+$("#c39").text("Electrical Shock");
+$("#c40").text("Shock");
+$("#c41").text("Hypothermia");
+$("#check40").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q14").hide();
+});
+$("#check39").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q14").hide();
+});
+$("#check41").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q14").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q15"){
+$(".q15").show();
+document.getElementById("questions").innerHTML="If unconscious victim is not breathing and has no pulse, _____________.";
+$("#c42").text("begin CPR");
+$("#c43").text("call 9-1-1");
+$("#c44").text("run for help");
+$("#check42").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q15").hide();
+});
+$("#check43").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q15").hide();
+});
+$("#check44").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q15").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q16"){
+$(".q16").show();
+document.getElementById("questions").innerHTML="The person should be encouraged to use the principles of 'paying the PRICE' and 'avoiding _____________' for the first 48-72 hours after the injury.";
+$("#c45").text("WARM");
+$("#c46").text("PRICE");
+$("#c47").text("HARM");
+$("#check45").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q16").hide();
+});
+$("#check46").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q16").hide();
+});
+$("#check47").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q16").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+}else if(a=="" || qqq.length==0){
+qqq.splice(0,1);
+window.localStorage.setItem("score",score);
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+}
+},1000);
+}
+
+
+$("#about").on("swipeleft",function(){
+	$.mobile.changePage( $("#hotlines"), { transition: "slide"} );
+});
+$("#hotlines").on("swiperight",function(){
+	$.mobile.changePage( $("#about"), { transition: "slide", reverse:"true"} );
+});
+
+</script>
+</body>
+</html>
